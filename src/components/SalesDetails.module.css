@@ -6,15 +6,19 @@
   display: none;
   max-width: 100%;
 }
+
 .sales {
   margin: 0;
   position: relative;
-  font-size: inherit;
+  font-size: 24px;
   line-height: 20px;
   font-weight: 700;
   font-family: inherit;
   z-index: 1;
+  margin-bottom: 20px;
+  color: var(--color-white);
 }
+
 .salesWrapper {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
   justify-content: flex-start;
   padding: var(--padding-8xs) 0 0;
 }
+
 .monthSelector {
   height: 28px;
   width: 104px;
@@ -31,14 +36,20 @@
   color: var(--color-white);
   z-index: 1;
 }
+
 .salesChart {
-  align-self: stretch;
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--gap-xl);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-4xl);
+  background-color: var(--color-darkslategray-200);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .chartValue,
 .chartValue1 {
   position: relative;
@@ -48,23 +59,28 @@
   min-width: 33px;
   z-index: 1;
 }
+
 .chartValue1 {
   min-width: 26px;
 }
+
 .chartValues,
 .chartValuesWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .chartValues {
   justify-content: flex-start;
   gap: var(--gap-31xl);
 }
+
 .chartValuesWrapper {
   justify-content: flex-end;
   padding: 0 0 var(--padding-12xs);
 }
+
 .lineIcon {
   position: absolute;
   top: 0;
@@ -74,6 +90,7 @@
   mix-blend-mode: normal;
   z-index: 1;
 }
+
 .graphIcon {
   position: absolute;
   top: 37px;
@@ -82,6 +99,7 @@
   height: 205px;
   z-index: 2;
 }
+
 .combinedShapeIcon,
 .lineParent {
   position: absolute;
@@ -90,14 +108,17 @@
   width: 100%;
   height: 100%;
 }
+
 .lineParent {
   margin: 0 !important;
   right: 0;
   bottom: 0;
 }
+
 .combinedShapeIcon {
   z-index: 2;
 }
+
 .legendLabel {
   position: absolute;
   top: 2px;
@@ -106,17 +127,20 @@
   min-width: 64px;
   z-index: 3;
 }
+
 .combinedShapeParent {
   width: 80px;
   height: 28px;
   position: relative;
 }
+
 .frameGroup,
 .frameParent {
   display: flex;
   justify-content: flex-start;
   max-width: 100%;
 }
+
 .frameGroup {
   flex: 1;
   flex-direction: column;
@@ -129,6 +153,7 @@
   text-align: left;
   color: var(--color-white);
 }
+
 .frameParent {
   align-self: stretch;
   flex-direction: row;
@@ -136,6 +161,7 @@
   align-items: flex-end;
   gap: var(--gap-21xl);
 }
+
 .k,
 .k1 {
   position: relative;
@@ -145,9 +171,11 @@
   min-width: 14px;
   z-index: 1;
 }
+
 .k1 {
   min-width: 21px;
 }
+
 .chartContainerInner,
 .kParent {
   display: flex;
@@ -155,50 +183,60 @@
   align-items: flex-start;
   max-width: 100%;
 }
+
 .kParent {
   flex: 1;
   justify-content: space-between;
   gap: var(--gap-xl);
 }
+
 .chartContainerInner {
-  width: 1165px;
-  justify-content: flex-end;
-  padding: 0 var(--padding-4xs);
+  width: 100%;
+  max-width: 1200px; /* คงค่าเดิม */
+  height: 1000px; /* ปรับลดจาก 1200px เป็น 800px หรือค่าที่คุณต้องการ */
+  margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center; /* เพิ่มเพื่อจัดกราฟให้อยู่กึ่งกลางแนวนอน */
 }
+
 .chartContainer,
 .salesDetails {
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: var(--gap-4xl);
+  width: 100%; /* เพิ่มเพื่อให้แน่ใจว่าใช้ความกว้างทั้งหมด */
   max-width: 100%;
+  height: 150%;
   text-align: center;
   font-size: var(--font-size-xs);
   color: var(--color-gray-400);
-}
-.salesDetails {
-  border-radius: var(--br-sm);
   background-color: var(--color-darkslategray-200);
   border: 0 solid var(--color-darkslategray-100);
   box-sizing: border-box;
-  align-items: flex-start;
-  padding: var(--padding-13xl) var(--padding-13xl) var(--padding-39xl);
-  gap: var(--gap-29xl);
-  flex-shrink: 0;
+  padding: var(--padding-13xl);
   z-index: 1;
-  text-align: left;
-  font-size: var(--font-size-5xl);
-  color: var(--color-white);
   font-family: var(--font-nunito-sans);
 }
+
 @media screen and (max-width: 1050px) {
   .frameGroup {
     min-width: 100%;
   }
+  .salesDetails {
+    justify-content: space-around;
+  }
+  .salesChart {
+    width: calc(50% - var(--gap-21xl));
+  }
 }
+
 @media screen and (max-width: 750px) {
   .frameGroup {
     padding-left: var(--padding-124xl);
@@ -216,17 +254,21 @@
     flex-wrap: wrap;
   }
   .salesDetails {
-    gap: var(--gap-5xl);
+    flex-direction: column;
+    align-items: center;
+  }
+  .salesChart {
+    width: 100%;
   }
 }
+
 @media screen and (max-width: 450px) {
   .sales {
     font-size: var(--font-size-lgi);
     line-height: 16px;
   }
   .salesChart {
-    flex-wrap: wrap;
-    justify-content: center;
+    min-width: 100%;
   }
   .frameGroup {
     padding-left: var(--padding-xl);

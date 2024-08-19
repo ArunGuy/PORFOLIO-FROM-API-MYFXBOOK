@@ -11,14 +11,17 @@ export type FrameComponentType = {
 const FrameComponent: FunctionComponent<FrameComponentType> = ({
   className = "",
 }) => {
-  const [propCount, setPropCount] = useState<string>("40,689"); // ค่าเริ่มต้น
+  const [propCount, setPropCount] = useState<string>("0"); // Default to "0"
+  const [totalGain, setTotalGain] = useState<string>("$0");
+  const [totalGainToday, setTotalGainToday] = useState<string>("$0");
 
   useEffect(() => {
-    const fetchAccountCount = async () => {
-      const sessionId = localStorage.getItem('sessionId'); // ดึง sessionId จาก localStorage
+    const fetchAccountData = async () => {
+      const sessionId = localStorage.getItem('sessionId');
       
       if (sessionId) {
         try {
+          // Fetch account data to calculate Total Gain
           const response = await axios.get(
             `https://www.myfxbook.com/api/get-my-accounts.xml?session=${sessionId}`
           );
@@ -27,54 +30,79 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(response.data, 'text/xml');
             const accounts = xmlDoc.getElementsByTagName('account');
-            const accountCount = accounts.length;
+            let totalGainSum = 0;
 
-            console.log('Number of Accounts:', accountCount);
+            // Update the account count
+            setPropCount(accounts.length.toString());
 
-            // อัปเดต propCount ตามจำนวน accounts
-            setPropCount(accountCount.toString());
+            for (let i = 0; i < accounts.length; i++) {
+              const gainElement = accounts[i].getElementsByTagName('gain')[0];
+              const gainValue = gainElement ? parseFloat(gainElement.textContent || "0") : 0;
+
+              totalGainSum += gainValue;
+            }
+
+            // Update the Total Gain state
+            setTotalGain(totalGainSum.toFixed(2));
           } else {
             console.warn('Unexpected response status:', response.status);
           }
         } catch (error) {
-          console.error('Error fetching accounts:', error);
+          console.error('Error fetching gain data:', error);
+        }
+
+        try {
+          // Fetch Total Gain Today data from the separate API
+          const todayResponse = await axios.get(
+            `https://www.myfxbook.com/api/get-daily-gain.xml?session=${sessionId}&id=12345&start=2000-01-01&end=2010-01-01`
+          );
+
+          if (todayResponse.status === 200) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(todayResponse.data, 'text/xml');
+            const todayElement = xmlDoc.getElementsByTagName('gain')[0];
+            const todayGain = todayElement ? todayElement.textContent || "0" : "0";
+
+            // Update the Total Gain Today state
+            setTotalGainToday(parseFloat(todayGain).toFixed(2));
+          } else {
+            console.warn('Unexpected response status:', todayResponse.status);
+          }
+        } catch (error) {
+          console.error('Error fetching today gain data:', error);
         }
       } else {
         console.error('Session ID not found in localStorage');
       }
     };
 
-    fetchAccountCount();
+    fetchAccountData();
   }, []);
 
   return (
     <div className={[styles.totalUsersParent, className].join(" ")}>
       <TotalUsers
         totalUser="Total Portfolio"
-        prop={propCount} // แสดงจำนวน account ที่ดึงมาจาก API
+        prop={propCount} // Display the total number of accounts
         icon="/icon@2x.png"
-        prop1="8.5%"
-        upFromYesterday="Up from yesterday"
       />
-      
       <Budget
         totalSales="Total Gain"
-        separator="$89,000"
+        separator={totalGain}
         icon="/icon-2@2x.png"
-        icTrendingDown24px="/ictrendingdown24px.svg"
-        prop="4.3%"
-        downFromYesterday="Down from yesterday"
+        icTrendingDown24px="/ictrendingup24px.svg"
+  
       />
       <Budget
         totalSales="Total Gain Today"
         propMinWidth="123px"
-        separator="2040"
+        separator={totalGainToday}
         propMinWidth1="72px"
         icon="/icon-3@2x.png"
         icTrendingDown24px="/ictrendingup24px.svg"
-        prop="1.8%"
+        prop={totalGainToday}
         propColor="#00b69b"
-        downFromYesterday="Up from yesterday"
+        downFromYesterday="Gain"
       />
     </div>
   );

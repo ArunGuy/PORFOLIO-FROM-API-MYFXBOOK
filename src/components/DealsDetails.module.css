@@ -1,3 +1,11 @@
+/* DealsDetails.module.css */
+.dealsDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .cardIcon {
   width: 1296px;
   height: 420px;
@@ -6,6 +14,7 @@
   display: none;
   max-width: 100%;
 }
+
 .sales {
   margin: 0;
   position: relative;
@@ -15,6 +24,7 @@
   font-family: inherit;
   z-index: 1;
 }
+
 .salesWrapper {
   display: flex;
   flex-direction: column;
@@ -22,6 +32,7 @@
   justify-content: flex-start;
   padding: var(--padding-8xs) 0 0;
 }
+
 .monthSelector {
   height: 28px;
   width: 104px;
@@ -31,6 +42,7 @@
   color: var(--color-white);
   z-index: 1;
 }
+
 .dealsChart {
   align-self: stretch;
   display: flex;
@@ -39,6 +51,7 @@
   justify-content: space-between;
   gap: var(--gap-xl);
 }
+
 .rectangle {
   height: 100%;
   width: 100%;
@@ -55,16 +68,18 @@
   mix-blend-mode: normal;
   z-index: 1;
 }
-.location,
-.productName {
+
+.location, .productName {
   position: relative;
   display: inline-block;
   min-width: 97px;
   z-index: 2;
 }
+
 .location {
   min-width: 44px;
 }
+
 .tableHeaderLabel {
   width: 105px;
   flex-shrink: 0;
@@ -75,12 +90,14 @@
   padding: 0 var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
+
 .dateTime {
   position: relative;
   display: inline-block;
   min-width: 52px;
   z-index: 2;
 }
+
 .tableHeaderLabel1 {
   width: 113px;
   flex-shrink: 0;
@@ -91,12 +108,14 @@
   padding: 0 var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
+
 .piece {
   position: relative;
   display: inline-block;
   min-width: 30px;
   z-index: 2;
 }
+
 .tableHeaderLabel2 {
   display: flex;
   flex-direction: column;
@@ -104,12 +123,14 @@
   justify-content: flex-start;
   padding: 0 var(--padding-8xs) 0 0;
 }
+
 .amount {
   position: relative;
   display: inline-block;
   min-width: 40px;
   z-index: 2;
 }
+
 .tableHeaderLabel3 {
   width: 64px;
   flex-shrink: 0;
@@ -120,12 +141,14 @@
   padding: 0 var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
+
 .status {
   position: relative;
   display: inline-block;
   min-width: 43px;
   z-index: 2;
 }
+
 .tableHeader {
   align-self: stretch;
   overflow-x: auto;
@@ -133,47 +156,51 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  padding: var(--padding-base) var(--padding-57xl) var(--padding-smi)
-    var(--padding-5xl);
+  padding: var(--padding-base) var(--padding-57xl) var(--padding-smi) var(--padding-5xl);
   position: relative;
   gap: var(--gap-xl);
   color: var(--color-white);
 }
-.appleWatch,
-.imageIcon {
+
+.appleWatch, .imageIcon {
   position: relative;
   z-index: 1;
 }
+
 .imageIcon {
   height: 36px;
   width: 36px;
   object-fit: cover;
 }
+
 .appleWatch {
   font-weight: 600;
   display: inline-block;
   mix-blend-mode: normal;
   min-width: 85px;
 }
-.appleWatchWrapper,
-.productImageContainer {
+
+.appleWatchWrapper, .productImageContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   padding: var(--padding-4xs) 0 0;
 }
+
 .productImageContainer {
   flex-direction: row;
   padding: 0 var(--padding-mid) 0 0;
   gap: var(--gap-base);
 }
+
 .marjolaineLand {
   position: relative;
   font-weight: 600;
   mix-blend-mode: normal;
   z-index: 1;
 }
+
 .pWrapper {
   display: flex;
   flex-direction: column;
@@ -181,6 +208,7 @@
   justify-content: flex-start;
   padding: var(--padding-4xs) var(--padding-xl) 0 0;
 }
+
 .productStatusIcon {
   position: relative;
   font-weight: 600;
@@ -189,6 +217,7 @@
   min-width: 26px;
   z-index: 1;
 }
+
 .productStatusIconWrapper {
   width: 91px;
   display: flex;
@@ -198,6 +227,7 @@
   padding: var(--padding-4xs) var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
+
 .productDeliveryIcon {
   position: relative;
   font-weight: 600;
@@ -207,6 +237,7 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .productDeliveryIconWrapper {
   width: 100px;
   display: flex;
@@ -216,11 +247,13 @@
   padding: var(--padding-4xs) var(--padding-xl) 0 0;
   box-sizing: border-box;
 }
+
 .delivered {
   align-self: stretch;
   height: 27px;
   z-index: 1;
 }
+
 .deliveredWrapper {
   width: 93px;
   display: flex;
@@ -230,18 +263,20 @@
   padding: var(--padding-8xs) 0 0;
   box-sizing: border-box;
 }
-.productImageContainerParent,
-.productRow {
+
+.productImageContainerParent, .productRow {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   max-width: 100%;
 }
+
 .productImageContainerParent {
   flex: 1;
   justify-content: space-between;
   gap: var(--gap-xl);
 }
+
 .productRow {
   width: 1208px;
   justify-content: flex-start;
@@ -249,6 +284,7 @@
   box-sizing: border-box;
   color: var(--color-gray-400);
 }
+
 .productTableChild {
   align-self: stretch;
   position: relative;
@@ -258,29 +294,33 @@
   mix-blend-mode: normal;
   z-index: 1;
 }
+
 .imageIcon1 {
   height: 36px;
   width: 36px;
   position: relative;
   object-fit: cover;
 }
+
 .appleWatch1 {
   align-self: stretch;
   position: relative;
   font-weight: 600;
   mix-blend-mode: normal;
 }
-.appleWatchContainer,
-.imageParent {
+
+.appleWatchContainer, .imageParent {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .appleWatchContainer {
   flex: 1;
   flex-direction: column;
   padding: var(--padding-4xs) 0 0;
 }
+
 .imageParent {
   width: 154px;
   flex-direction: row;
@@ -288,6 +328,7 @@
   box-sizing: border-box;
   gap: var(--gap-base);
 }
+
 .marjolaineLand1 {
   align-self: stretch;
   position: relative;
@@ -295,8 +336,8 @@
   mix-blend-mode: normal;
   z-index: 1;
 }
-.marjolaineLandContainer,
-.pContainer {
+
+.marjolaineLandContainer, .pContainer {
   width: 160px;
   display: flex;
   flex-direction: column;
@@ -305,154 +346,145 @@
   padding: var(--padding-4xs) 0 0;
   box-sizing: border-box;
 }
+
 .pContainer {
   width: 172px;
   padding: var(--padding-4xs) var(--padding-xl) 0 0;
 }
-.div,
-.div1 {
+
+.div, .div1 {
   width: 26px;
   position: relative;
   font-weight: 600;
-  display: inline-block;
-  mix-blend-mode: normal;
   z-index: 1;
 }
+
 .div1 {
   width: 54px;
-  white-space: nowrap;
 }
-.rectangle1 {
-  height: 27px;
-  width: 93px;
-  position: relative;
-  border-radius: var(--br-sm-5);
-  background-color: var(--color-goldenrod);
-  display: none;
-}
-.delivered1,
-.pending {
-  align-self: stretch;
-  z-index: 1;
-}
-.pending {
-  flex: 1;
-  position: relative;
-}
-.delivered1 {
-  height: 27px;
-  border-radius: var(--br-sm-5);
-  background-color: var(--color-goldenrod);
-  flex-direction: row;
-  padding: var(--padding-9xs) var(--padding-lgi) var(--padding-9xs)
-    var(--padding-xl);
-}
-.delivered1,
-.deliveredContainer,
-.productRow1 {
+
+.dealsTable {
+  width: 1186px;
+  height: 55px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  box-sizing: border-box;
-}
-.deliveredContainer {
-  width: 93px;
-  flex-direction: column;
-  padding: var(--padding-8xs) 0 0;
-  text-align: center;
-  color: var(--color-white);
-}
-.productRow1 {
-  width: 1208px;
-  flex-direction: row;
   padding: 0 var(--padding-5xl);
-  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--color-darkslategray);
+  border-radius: var(--br-9xs);
+  gap: var(--gap-6xs);
+  overflow-x: auto;
+  color: var(--color-white);
 }
-.rectangle2 {
-  height: 27px;
-  width: 93px;
-  position: relative;
-  border-radius: var(--br-sm-5);
-  background-color: var(--color-tomato);
-  display: none;
-}
-.dealsDetails,
-.delivered2,
-.deliveredFrame,
+
 .productTable {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding: var(--padding-4xs) 0 0;
+  gap: var(--gap-xl);
 }
-.delivered2 {
-  align-self: stretch;
-  height: 27px;
-  border-radius: var(--br-sm-5);
-  background-color: var(--color-tomato);
+
+.productTable .productRow, .productRow {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.imageIcon2 {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.productRowWrapper {
+  display: flex;
   flex-direction: row;
-  padding: var(--padding-9xs) var(--padding-mid) var(--padding-9xs)
-    var(--padding-lgi);
-  box-sizing: border-box;
-  z-index: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.dealsDetails,
-.deliveredFrame,
-.productTable {
+
+.tableContainer {
+  display: flex;
   flex-direction: column;
+  height: 100%;
 }
-.deliveredFrame {
-  width: 93px;
-  padding: var(--padding-8xs) 0 0;
-  box-sizing: border-box;
-  color: var(--color-white);
+
+.tableRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--padding-4xs) var(--padding-base);
 }
-.dealsDetails,
-.productTable {
-  align-self: stretch;
-  gap: var(--gap-3xl);
-  max-width: 100%;
+
+.tableRowContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.tableCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-4xs) var(--padding-sm);
+}
+
+.tableCell div {
+  width: 100%;
+}
+
+.tableCell1 {
+  width: 100px;
+}
+
+.tableCell2 {
+  width: 150px;
+}
+
+.tableCell3 {
+  width: 200px;
+}
+
+.tableCell4 {
+  width: 250px;
+}
+
+.tableCell5 {
+  width: 300px;
+}
+
+.tableFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-4xs) var(--padding-base);
+}
+
+.tableFooterItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-4xs);
+}
+
+.tableFooterItem span {
+  margin-left: var(--margin-base);
+}
+
+.footerMessage {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-500);
+  font-weight: 400;
 }
-.dealsDetails {
-  border-radius: var(--br-sm);
-  background-color: var(--color-darkslategray-200);
-  border: 0 solid var(--color-darkslategray-100);
-  box-sizing: border-box;
-  padding: var(--padding-13xl) var(--padding-13xl) var(--padding-18xl);
-  gap: var(--gap-13xl);
-  flex-shrink: 0;
-  z-index: 1;
-  text-align: left;
-  font-size: var(--font-size-5xl);
-  color: var(--color-white);
-  font-family: var(--font-nunito-sans);
-}
-@media screen and (max-width: 1200px) {
-  .tableHeader {
-    padding-right: var(--padding-19xl);
-    box-sizing: border-box;
-  }
-  .productImageContainerParent {
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 750px) {
-  .dealsDetails {
-    gap: var(--gap-base);
-  }
-}
-@media screen and (max-width: 450px) {
-  .sales {
-    font-size: var(--font-size-lgi);
-    line-height: 16px;
-  }
-  .dealsChart {
-    flex-wrap: wrap;
-  }
-  .dealsDetails {
-    padding-top: var(--padding-2xl);
-    padding-bottom: var(--padding-5xl);
-    box-sizing: border-box;
-  }
+
+.footerActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--margin-base);
 }

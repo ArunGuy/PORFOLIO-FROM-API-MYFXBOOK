@@ -14,7 +14,7 @@ const DD: React.FC = () => {
     const fetchSessionId = async () => {
       try {
         const response = await axios.get(
-          'https://www.myfxbook.com/api/login.xml?email=arunwichchusin@gmail.com&password=Mas050322566'
+          'https://www.myfxbook.com/api/login.xml?email=arunwichchusin@hotmail.com&password=Mas050322566'
         );
 
         console.log('API Response:', response.data);
