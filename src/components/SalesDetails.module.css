@@ -1,0 +1,241 @@
+.cardIcon {
+  width: 1296px;
+  height: 444px;
+  position: relative;
+  border-radius: var(--br-sm);
+  display: none;
+  max-width: 100%;
+}
+.sales {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: inherit;
+  z-index: 1;
+}
+.salesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.monthSelector {
+  height: 28px;
+  width: 104px;
+  font-family: var(--font-nunito-sans);
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  z-index: 1;
+}
+.salesChart {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.chartValue,
+.chartValue1 {
+  position: relative;
+  line-height: 9px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 33px;
+  z-index: 1;
+}
+.chartValue1 {
+  min-width: 26px;
+}
+.chartValues,
+.chartValuesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.chartValues {
+  justify-content: flex-start;
+  gap: var(--gap-31xl);
+}
+.chartValuesWrapper {
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-12xs);
+}
+.lineIcon {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 1156px;
+  height: 237px;
+  mix-blend-mode: normal;
+  z-index: 1;
+}
+.graphIcon {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  width: 1159px;
+  height: 205px;
+  z-index: 2;
+}
+.combinedShapeIcon,
+.lineParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.lineParent {
+  margin: 0 !important;
+  right: 0;
+  bottom: 0;
+}
+.combinedShapeIcon {
+  z-index: 2;
+}
+.legendLabel {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  display: inline-block;
+  min-width: 64px;
+  z-index: 3;
+}
+.combinedShapeParent {
+  width: 80px;
+  height: 28px;
+  position: relative;
+}
+.frameGroup,
+.frameParent {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frameGroup {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-6xs) var(--padding-268xl) var(--padding-188xl);
+  box-sizing: border-box;
+  position: relative;
+  min-width: 753px;
+  min-height: 242px;
+  text-align: left;
+  color: var(--color-white);
+}
+.frameParent {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--gap-21xl);
+}
+.k,
+.k1 {
+  position: relative;
+  line-height: 9px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 14px;
+  z-index: 1;
+}
+.k1 {
+  min-width: 21px;
+}
+.chartContainerInner,
+.kParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.kParent {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.chartContainerInner {
+  width: 1165px;
+  justify-content: flex-end;
+  padding: 0 var(--padding-4xs);
+  box-sizing: border-box;
+}
+.chartContainer,
+.salesDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-4xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+.salesDetails {
+  border-radius: var(--br-sm);
+  background-color: var(--color-darkslategray-200);
+  border: 0 solid var(--color-darkslategray-100);
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: var(--padding-13xl) var(--padding-13xl) var(--padding-39xl);
+  gap: var(--gap-29xl);
+  flex-shrink: 0;
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-nunito-sans);
+}
+@media screen and (max-width: 1050px) {
+  .frameGroup {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .frameGroup {
+    padding-left: var(--padding-124xl);
+    padding-right: var(--padding-124xl);
+    box-sizing: border-box;
+  }
+  .frameParent {
+    gap: var(--gap-xl);
+  }
+  .k {
+    width: 100%;
+    height: 14px;
+  }
+  .kParent {
+    flex-wrap: wrap;
+  }
+  .salesDetails {
+    gap: var(--gap-5xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .sales {
+    font-size: var(--font-size-lgi);
+    line-height: 16px;
+  }
+  .salesChart {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .frameGroup {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .salesDetails {
+    padding-top: var(--padding-2xl);
+    padding-bottom: var(--padding-19xl);
+    box-sizing: border-box;
+  }
+}

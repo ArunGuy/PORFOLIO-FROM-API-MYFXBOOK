@@ -1,0 +1,109 @@
+.bg {
+  width: 300px;
+  height: 170px;
+  position: relative;
+  border-radius: var(--br-sm);
+  background-color: var(--color-darkslategray-200);
+  border: 1px solid var(--color-darkslategray-100);
+  box-sizing: border-box;
+  display: none;
+}
+.b,
+.totalUser {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.totalUser {
+  font-weight: 600;
+  mix-blend-mode: normal;
+  min-width: 105px;
+}
+.b {
+  font-size: var(--font-size-9xl);
+  letter-spacing: 1px;
+  color: var(--color-white);
+  min-width: 97px;
+}
+.totalUserParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.icTrendingUp24pxIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  min-height: 24px;
+  z-index: 1;
+}
+.span {
+  color: var(--color-gray-200);
+}
+.upFromYesterday {
+  color: var(--color-gainsboro);
+}
+.upFromYesterdContainer {
+  position: relative;
+  font-weight: 600;
+  z-index: 1;
+}
+.icTrendingUp24pxParent,
+.totalUsers,
+.upFromYesterdWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.upFromYesterdWrapper {
+  flex-direction: column;
+  padding: var(--padding-12xs) 0 0;
+}
+.icTrendingUp24pxParent,
+.totalUsers {
+  flex-direction: row;
+  gap: var(--gap-5xs);
+  color: var(--color-lightseagreen);
+}
+.totalUsers {
+  flex: 0.84;
+  border-radius: var(--br-sm);
+  background-color: var(--color-darkslategray-200);
+  border: 1px solid var(--color-darkslategray-100);
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: var(--padding-3xl) var(--padding-4xl);
+  gap: var(--gap-2xl);
+  min-width: 225px;
+  max-width: 300px;
+  z-index: 1;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+  font-family: var(--font-nunito-sans);
+}
+@media screen and (max-width: 450px) {
+  .b {
+    font-size: var(--font-size-3xl);
+  }
+  .totalUsers {
+    flex: 1;
+  }
+}

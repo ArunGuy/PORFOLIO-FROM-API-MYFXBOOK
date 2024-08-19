@@ -1,0 +1,20 @@
+.mainBg {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-gray-100);
+  max-width: 100%;
+}
+.mainBgColor {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
