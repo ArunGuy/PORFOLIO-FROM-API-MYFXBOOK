@@ -1,0 +1,114 @@
+.bg {
+  width: 300px;
+  height: 170px;
+  position: relative;
+  border-radius: var(--br-sm);
+  background-color: var(--color-darkslategray-200);
+  border: 1px solid var(--color-darkslategray-100);
+  box-sizing: border-box;
+  display: none;
+}
+.separator,
+.totalSales1 {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.totalSales1 {
+  font-weight: 600;
+  mix-blend-mode: normal;
+  min-width: 75px;
+}
+.separator {
+  font-size: var(--font-size-9xl);
+  letter-spacing: 1px;
+  color: var(--color-white);
+  min-width: 115px;
+  white-space: nowrap;
+}
+.totalSalesParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.icTrendingDown24pxIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  min-height: 24px;
+  z-index: 1;
+}
+.span {
+  color: var(--color-gray-200);
+}
+.downFromYesterday {
+  color: var(--color-gainsboro);
+}
+.downFromYesteContainer {
+  position: relative;
+  font-weight: 600;
+  z-index: 1;
+}
+.downFromYesteWrapper {
+  flex-direction: column;
+  padding: var(--padding-12xs) 0 0;
+}
+.budget,
+.downFromYesteWrapper,
+.icTrendingDown24pxParent,
+.totalSales {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.icTrendingDown24pxParent {
+  flex-direction: row;
+  gap: var(--gap-5xs);
+  color: var(--color-crimson);
+}
+.budget,
+.totalSales {
+  flex-direction: column;
+}
+.totalSales {
+  align-self: stretch;
+  border-radius: var(--br-sm);
+  background-color: var(--color-darkslategray-200);
+  border: 1px solid var(--color-darkslategray-100);
+  padding: var(--padding-3xl) var(--padding-4xl);
+  gap: var(--gap-2xl);
+  z-index: 1;
+}
+.budget {
+  flex: 1;
+  padding: var(--padding-9xs) 0 0;
+  box-sizing: border-box;
+  min-width: 272px;
+  max-width: 300px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+  font-family: var(--font-nunito-sans);
+}
+@media screen and (max-width: 450px) {
+  .separator {
+    font-size: var(--font-size-3xl);
+  }
+}

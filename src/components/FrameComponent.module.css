@@ -1,0 +1,18 @@
+.totalUsersParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-11xl);
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-300);
+  font-family: var(--font-nunito-sans);
+}
+@media screen and (max-width: 1200px) {
+  .totalUsersParent {
+    flex-wrap: wrap;
+  }
+}
